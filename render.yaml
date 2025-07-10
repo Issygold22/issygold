@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: telegram-airdrop-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: YOUR_BOT_TOKEN_HERE
+      - key: CHANNEL_USERNAME
+        value: YOUR_CHANNEL_HERE
+      - key: GROUP_USERNAME
+        value: YOUR_GROUP_HERE
+      - key: TWITTER_URL
+        value: YOUR_TWITTER_URL_HERE
+      - key: PORT
+        value: 10000
